@@ -1,0 +1,56 @@
+.root {
+    -fx-font-family: Poppins, sans-serif !important;
+}
+
+#loginHBox {
+    -fx-background-image: url("bg.jpg");
+    -fx-background-size: cover;
+    -fx-background-position: center center;
+}
+
+#loginVBox {
+    -fx-background-color: #593d33;
+    -fx-background-radius: 40;
+}
+
+#usernameField,
+#passwordField {
+    -fx-background-radius: 40;
+}
+
+#loginBtn {
+    -fx-background-color: #000000;
+    -fx-pref-width: 200;
+    -fx-pref-height: 40;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+    -fx-background-radius: 40;
+    -fx-cursor: hand;
+}
+
+#loginBtn:hover {
+    -fx-background-color: #262626;
+}
+
+#profileHBox {
+    -fx-padding: 20;
+    -fx-background-color: red;
+}
+
+
+/*#loginBtn {
+    -fx-background-color: transparent;
+    -fx-background-radius: 40;
+    -fx-pref-width: 200;
+    -fx-pref-height: 40;
+    -fx-text-fill: #000000;
+    -fx-font-weight: bold;
+    -fx-border-color: #000000;
+    -fx-border-width: 2;
+    -fx-border-radius: 40;
+    -fx-cursor: hand;
+}
+#loginBtn:hover {
+    -fx-background-color: #f1ac71;
+}
+ */
