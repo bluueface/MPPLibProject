@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="addMemberRoot" prefHeight="385.0" prefWidth="435.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Label layoutX="170.0" layoutY="184.0" text="Add new member" />
+    </children>
+</AnchorPane>

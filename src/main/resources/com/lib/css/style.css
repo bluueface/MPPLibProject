@@ -2,8 +2,8 @@
     -fx-font-family: Poppins, sans-serif !important;
 }
 
-#loginContainer,
-#profileContainer {
+#loginRoot,
+#profileRoot {
     -fx-background-image: url("bg.jpg");
     -fx-background-size: cover;
     -fx-background-position: center center;
@@ -47,14 +47,14 @@
 }
 
 #dashboardMenu {
-    -fx-pref-width: 170;
+    -fx-pref-width: 160;
     -fx-pref-height: 365;
     -fx-background-color: #262626;
     -fx-background-radius: 40;
 }
 
 .dashboardBtn {
-    -fx-pref-width: 170;
+    -fx-pref-width: 160;
     -fx-pref-height: 35;
     -fx-font-weight: bold;
     -fx-text-fill: #FFFFFF;
@@ -80,10 +80,24 @@
     -fx-background-color: #1a1a1a;
 }
 
-#dashboardMenuContent {
+#contentAnchorPane {
     -fx-border-color: #262626;
     -fx-border-width: 1;
     -fx-border-radius: 40;
-    -fx-pref-height: 340;
+}
+
+#homeRoot {
+
+}
+
+#addMemberRoot {
+}
+
+#editMemberRoot {
+
+}
+
+#addBookRoot {
+
 }
 

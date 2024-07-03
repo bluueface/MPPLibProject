@@ -5,28 +5,30 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
-
-<VBox fx:id="loginContainer" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lib.controllers.LoginController">
+<VBox fx:id="loginRoot" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+      minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22"
+      xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lib.controllers.LoginController">
     <children>
         <VBox fx:id="loginVBox" alignment="CENTER" maxWidth="300.0" spacing="20.0">
             <padding>
-                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
             </padding>
             <children>
                 <TextField fx:id="usernameField" prefHeight="34.0" prefWidth="385.0" promptText="Enter username">
                     <padding>
-                        <Insets left="10.0" />
+                        <Insets left="10.0"/>
                     </padding>
                 </TextField>
                 <PasswordField fx:id="passwordField" prefHeight="32.0" prefWidth="254.0" promptText="Enter password">
                     <padding>
-                        <Insets left="10.0" />
+                        <Insets left="10.0"/>
                     </padding>
                 </PasswordField>
-                <Button fx:id="loginBtn" mnemonicParsing="false" onAction="#signIn" prefHeight="46.0" prefWidth="263.0" text="Log In" />
+                <Button fx:id="loginBtn" mnemonicParsing="false" onAction="#login" prefHeight="46.0" prefWidth="263.0"
+                        text="Log In"/>
             </children>
             <VBox.margin>
-                <Insets />
+                <Insets/>
             </VBox.margin>
         </VBox>
     </children>

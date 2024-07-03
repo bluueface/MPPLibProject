@@ -10,22 +10,33 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class Main extends Application {
+    private static final double WIDTH = 670;
+
+    private static final double HEIGHT = 510;
+
     private static String style;
+
+    private static Stage mainStage;
 
     @Override
     public void start(Stage stage) throws IOException {
-        //FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("views/login.fxml"));
-        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("views/profile.fxml"));
-
+        mainStage = stage;
+        stage.setTitle("Library Management");
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("views/login.fxml"));
         Parent root = fxmlLoader.load();
-        Scene scene = new Scene(root, 320, 240);
+        Scene scene = new Scene(root, WIDTH, HEIGHT);
         style = Objects.requireNonNull(getClass().getResource("css/style.css")).toExternalForm();
         scene.getStylesheets().add(style);
-        stage.setTitle("Sample Library Application");
-        stage.setHeight(500);
-        stage.setWidth(660);
-        stage.setScene(scene);
-        stage.show();
+        mainStage.setScene(scene);
+        mainStage.show();
+    }
+
+    public static void loadProfile() throws Exception {
+        FXMLLoader loader = new FXMLLoader(Main.class.getResource("views/profile.fxml"));
+        Parent root = loader.load();
+        Scene scene = new Scene(root, WIDTH, HEIGHT);
+        scene.getStylesheets().add(style);
+        mainStage.setScene(scene);
     }
 
     public static String getStyle() {
