@@ -6,7 +6,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox fx:id="loginHBox" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lib.controllers.LoginController">
+<VBox fx:id="loginContainer" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lib.controllers.LoginController">
     <children>
         <VBox fx:id="loginVBox" alignment="CENTER" maxWidth="300.0" spacing="20.0">
             <padding>
@@ -23,7 +23,7 @@
                         <Insets left="10.0" />
                     </padding>
                 </PasswordField>
-                <Button fx:id="loginBtn" mnemonicParsing="false" onAction="#signIn" prefHeight="46.0" prefWidth="263.0" text="Login" />
+                <Button fx:id="loginBtn" mnemonicParsing="false" onAction="#signIn" prefHeight="46.0" prefWidth="263.0" text="Log In" />
             </children>
             <VBox.margin>
                 <Insets />
