@@ -6,15 +6,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.paint.LinearGradient?>
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.shape.Circle?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="655.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
+<VBox fx:id="profileContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="484.0" prefWidth="655.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
     <children>
-        <HBox fx:id="profileHBox" alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10">
+        <HBox fx:id="profileHBox" alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10">
             <children>
                 <Circle fx:id="loginAvatar" fill="WHITE" radius="18.0" strokeType="INSIDE">
                     <stroke>
@@ -34,26 +35,39 @@
                         </LinearGradient>
                     </stroke>
                 </Circle>
-                <Label fx:id="profileLabel" prefHeight="18.0" prefWidth="125.0" text="Welcome Mr. John" />
+                <Label fx:id="profileLabel" prefHeight="18.0" prefWidth="125.0" text="Aziz Ouadoud" />
+                <Region prefHeight="40.0" prefWidth="321.0" HBox.hgrow="ALWAYS" />
+                <Button fx:id="logOutBtn" mnemonicParsing="false" text="Log Out" />
             </children>
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+            <padding>
+                <Insets left="20.0" right="20.0" top="20.0" />
+            </padding>
         </HBox>
-        <AnchorPane prefHeight="384.0" prefWidth="609.0">
+        <AnchorPane prefHeight="390.0" prefWidth="601.0" VBox.vgrow="ALWAYS">
             <children>
-                <Pane fx:id="dashboardMenu" prefHeight="384.0" prefWidth="217.0">
+                <HBox alignment="TOP_CENTER" spacing="23.0">
                     <children>
-                        <VBox prefHeight="384.0" prefWidth="217.0" spacing="10.0">
+                        <Pane fx:id="dashboardMenu" prefHeight="384.0" prefWidth="217.0">
                             <children>
-                                <Button mnemonicParsing="false" styleClass="dashboardBtn" text="Add Member" />
-                                <Button mnemonicParsing="false" styleClass="dashboardBtn" text="Edit Member" />
-                                <Button mnemonicParsing="false" styleClass="dashboardBtn" text="Add Book" />
-                                <Button fx:id="logOutBtn" mnemonicParsing="false" text="Log Out" />
+                                <VBox prefHeight="222.0" prefWidth="217.0" spacing="5.0">
+                                    <children>
+                                        <Button fx:id="homeBtn" mnemonicParsing="false" styleClass="dashboardBtn" text="Home" />
+                                        <Button fx:id="addMemberBtn" mnemonicParsing="false" styleClass="dashboardBtn" text="Add Member" />
+                                        <Button fx:id="editMemberBtn" mnemonicParsing="false" styleClass="dashboardBtn" text="Edit Member" />
+                                        <Button fx:id="addBookBtn" mnemonicParsing="false" styleClass="dashboardBtn" text="Add Book" />
+                                    </children>
+                                    <padding>
+                                        <Insets top="38.0" />
+                                    </padding>
+                                </VBox>
                             </children>
-                            <padding>
-                                <Insets left="30.0" top="20.0" />
-                            </padding>
-                        </VBox>
+                        </Pane>
+                        <Pane fx:id="dashboardMenuContent" prefHeight="328.0" prefWidth="407.0" />
                     </children>
-                </Pane>
+                </HBox>
             </children>
             <VBox.margin>
                 <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />

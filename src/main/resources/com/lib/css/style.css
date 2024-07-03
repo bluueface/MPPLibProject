@@ -2,7 +2,8 @@
     -fx-font-family: Poppins, sans-serif !important;
 }
 
-#loginContainer {
+#loginContainer,
+#profileContainer {
     -fx-background-image: url("bg.jpg");
     -fx-background-size: cover;
     -fx-background-position: center center;
@@ -33,12 +34,7 @@
 }
 
 #profileHBox {
-    -fx-background-image: url("bg.jpg");
-    -fx-background-size: cover;
-    -fx-background-position: center center;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 15, -0.3, 0, 10);
     -fx-pref-height: 40;
-    -fx-padding: 10
 }
 
 #loginAvatar {
@@ -52,27 +48,26 @@
 
 #dashboardMenu {
     -fx-pref-width: 170;
-    -fx-pref-height: 340;
+    -fx-pref-height: 365;
     -fx-background-color: #262626;
     -fx-background-radius: 40;
 }
 
 .dashboardBtn {
-    -fx-pref-width: 120;
+    -fx-pref-width: 170;
     -fx-pref-height: 35;
     -fx-font-weight: bold;
     -fx-text-fill: #FFFFFF;
     -fx-cursor: hand;
     -fx-background-color: transparent;
-    -fx-background-radius: 40;
 }
 
 .dashboardBtn:hover {
-    -fx-background-color: #3d2921;
+    -fx-background-color: #1a1a1a;
 }
 
 #logOutBtn {
-    -fx-background-color: #000000;
+    -fx-background-color: #262626;
     -fx-background-radius: 40;
     -fx-font-weight: bold;
     -fx-text-fill: #FFFFFF;
@@ -82,6 +77,13 @@
 }
 
 #logOutBtn:hover {
-    -fx-background-color: #262626;
+    -fx-background-color: #1a1a1a;
+}
+
+#dashboardMenuContent {
+    -fx-border-color: #262626;
+    -fx-border-width: 1;
+    -fx-border-radius: 40;
+    -fx-pref-height: 340;
 }
 
