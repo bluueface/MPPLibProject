@@ -89,11 +89,13 @@
 
 .saveBtn,
 #editMemberSearchBtn,
-#checkoutButton {
+#checkoutButton,
+#addCopyBtn {
     -fx-pref-height: 38;
 }
 
-#checkoutLabel {
+#checkoutLabel,
+#addCopyLabel {
     -fx-font-weight: bold;
     -fx-text-fill: FF0000FF;
 }

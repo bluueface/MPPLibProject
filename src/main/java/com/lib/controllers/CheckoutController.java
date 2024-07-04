@@ -40,13 +40,11 @@ public class CheckoutController {
             StringBuilder builder = new StringBuilder();
             DataAccess da = new DataAccessFacade();
             if (!da.readMemberMap().containsKey(memberId)) {
-                builder.append("Member not found");
-                builder.append("\n");
+                builder.append("Member not found ");
             }
 
             if (!da.readBooksMap().containsKey(bookISBN)) {
-                builder.append("Book not found");
-                builder.append("\n");
+                builder.append("//Book not found");
             }
             Book book = da.readBooksMap().get(bookISBN);
             if (book != null && !book.isAvailable()) {
@@ -70,8 +68,8 @@ public class CheckoutController {
                 Notify.confirmation("Checkout record saved successfully");
                 memberIdTxtField.clear();
                 bookISBNTxtField.clear();
+                checkoutLabel.setText("");
             }
-
         }
     }
 }

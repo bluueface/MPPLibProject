@@ -43,6 +43,12 @@ public class ProfileController {
     }
 
     @FXML
+    private void addBookCopy() {
+        loadContent("views/add-book-copy.fxml");
+    }
+
+
+    @FXML
     private void addBook() {
         loadContent("views/add-book.fxml");
     }
@@ -81,8 +87,7 @@ public class ProfileController {
                 break;
         }
     }
-
-
+    
     public void setContent(Node content) {
         contentAnchorPane.getChildren().setAll(content);
     }
