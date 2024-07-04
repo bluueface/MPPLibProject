@@ -1,11 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
 <?import javafx.scene.layout.AnchorPane?>
-
-
-<AnchorPane prefHeight="385.0" prefWidth="435.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <Label layoutX="191.0" layoutY="184.0" text="Add book" />
-   </children>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<AnchorPane prefHeight="385.0" prefWidth="435.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.lib.controllers.AddBookController">
+    <children>
+        <VBox prefHeight="385.0" prefWidth="435.0" spacing="20.0">
+            <children>
+                <TextField fx:id="bookISBNTxtField" promptText="Book ISBN" styleClass="textField"/>
+                <TextField fx:id="bookTitleTxtField" promptText="Book title" styleClass="textField"/>
+                <HBox prefHeight="48.0" prefWidth="395.0" spacing="20.0">
+                    <children>
+                        <TextField fx:id="maxTxtField" prefHeight="25.0" prefWidth="202.0"
+                                   promptText=" Maximum checkout length" styleClass="textField"/>
+                        <TextField fx:id="copiesTxtField" prefHeight="25.0" prefWidth="228.0"
+                                   promptText="Number of copies" styleClass="textField"/>
+                    </children>
+                </HBox>
+                <Region prefHeight="109.0" prefWidth="395.0"/>
+                <Button mnemonicParsing="false" onAction="#addBook" prefHeight="25.0" prefWidth="523.0"
+                        styleClass="saveBtn,btn" text="Save"/>
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+            </padding>
+        </VBox>
+    </children>
 </AnchorPane>

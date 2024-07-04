@@ -8,35 +8,13 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.paint.Color?>
-<?import javafx.scene.paint.LinearGradient?>
-<?import javafx.scene.paint.Stop?>
-<?import javafx.scene.shape.Circle?>
 
 <VBox fx:id="profileRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="670.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lib.controllers.ProfileController">
     <children>
         <HBox fx:id="profileHBox" alignment="CENTER_LEFT" prefHeight="40.0" prefWidth="670.0" spacing="10">
             <children>
-                <Circle fx:id="loginAvatar" fill="WHITE" radius="18.0" strokeType="INSIDE">
-                    <stroke>
-                        <LinearGradient endX="1.0" endY="1.0">
-                            <stops>
-                                <Stop>
-                                    <color>
-                                        <Color />
-                                    </color>
-                                </Stop>
-                                <Stop offset="1.0">
-                                    <color>
-                                        <Color />
-                                    </color>
-                                </Stop>
-                            </stops>
-                        </LinearGradient>
-                    </stroke>
-                </Circle>
-                <Label fx:id="profileLabel" prefHeight="18.0" prefWidth="125.0" text="Aziz Ouadoud" />
-                <Region prefHeight="40.0" prefWidth="321.0" HBox.hgrow="ALWAYS" />
+                <Label fx:id="profileLabel" prefHeight="18.0" prefWidth="250.0" text="Aziz Ouadoud" />
+                <Region prefHeight="40.0" prefWidth="283.0" HBox.hgrow="ALWAYS" />
                 <Button fx:id="logOutBtn" mnemonicParsing="false" onAction="#logout" styleClass="btn" text="Log Out" />
             </children>
             <VBox.margin>
@@ -47,15 +25,16 @@
             <children>
                 <HBox alignment="TOP_CENTER" prefHeight="390.0" prefWidth="630.0" spacing="23.0">
                     <children>
-                        <Pane fx:id="dashboardMenu" prefHeight="390.0" prefWidth="150.0">
+                        <Pane fx:id="dashboardMenu" prefHeight="390.0" prefWidth="166.0">
                             <children>
-                                <VBox prefHeight="222.0" prefWidth="217.0" spacing="5.0">
+                                <VBox prefHeight="390.0" prefWidth="166.0" spacing="10.0">
                                     <children>
-                                        <Button fx:id="addMemberBtn" mnemonicParsing="false" onAction="#addMember" styleClass="dashboardBtn" text="Add Member" />
-                                        <Button fx:id="editMemberBtn" mnemonicParsing="false" onAction="#editMember" styleClass="dashboardBtn" text="Edit Member" />
-                                        <Button fx:id="checkoutBookBtn" mnemonicParsing="false" onAction="#checkout" styleClass="dashboardBtn" text="Checkout Book" />
-                                        <Button fx:id="addBookBtn" mnemonicParsing="false" onAction="#addBook" styleClass="dashboardBtn" text="Add Book" />
-                                        <Button fx:id="addBookCopyBtn" mnemonicParsing="false" onAction="#addBookCopy" styleClass="dashboardBtn" text="Add Book Copy" />
+                                        <Button fx:id="addMemberBtn" mnemonicParsing="false" onAction="#addMember" prefHeight="30.0" prefWidth="166.0" styleClass="dashboardBtn" text="Add Member" />
+                                        <Button fx:id="editMemberBtn" mnemonicParsing="false" onAction="#editMember" prefHeight="30.0" prefWidth="166.0" styleClass="dashboardBtn" text="Edit Member" />
+                                        <Button fx:id="checkoutBookBtn" mnemonicParsing="false" onAction="#checkout" prefHeight="30.0" prefWidth="165.0" styleClass="dashboardBtn" text="Checkout Book" />
+                                        <Button fx:id="addBookBtn" mnemonicParsing="false" onAction="#addBook" prefHeight="30.0" prefWidth="166.0" styleClass="dashboardBtn" text="Add Book" />
+                                        <Button fx:id="addBookCopyBtn" mnemonicParsing="false" onAction="#addBookCopy" prefHeight="30.0" prefWidth="165.0" styleClass="dashboardBtn" text="Add Book Copy" />
+                                        <Button fx:id="printCheckoutRecordBtn" mnemonicParsing="false" onAction="#printCheckoutRecord" prefHeight="30.0" prefWidth="166.0" styleClass="dashboardBtn" text="Overview" />
                                     </children>
                                     <padding>
                                         <Insets top="38.0" />
@@ -64,12 +43,12 @@
                             </children>
                         </Pane>
                         <AnchorPane fx:id="contentAnchorPane" prefHeight="390.0" prefWidth="440.0">
-                            <children>
-
-                            </children>
                             <HBox.margin>
                                 <Insets />
                             </HBox.margin>
+                     <children>
+                        <Label fx:id="dashboardLabel" layoutX="109.0" layoutY="175.0" prefHeight="40.0" prefWidth="223.0" text="Select option from dashboard menu" />
+                     </children>
                         </AnchorPane>
                     </children>
                 </HBox>

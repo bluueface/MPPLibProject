@@ -8,6 +8,7 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -26,6 +27,15 @@ public class ProfileController {
 
     @FXML
     private Button checkoutBookBtn;
+
+    @FXML
+    private Button addBookCopyBtn;
+
+    @FXML
+    private Button printCheckoutRecordBtn;
+
+    @FXML
+    private Label profileLabel;
 
     @FXML
     private void checkout() {
@@ -54,6 +64,11 @@ public class ProfileController {
     }
 
     @FXML
+    private void printCheckoutRecord() {
+        loadContent("views/overview.fxml");
+    }
+
+    @FXML
     private void logout() {
         try {
             Parent loginView = FXMLLoader.load(Main.class.getResource("views/login.fxml"));
@@ -79,16 +94,22 @@ public class ProfileController {
         switch (currentAuth) {
             case ADMIN:
                 checkoutBookBtn.setManaged(false);
+                printCheckoutRecordBtn.setManaged(false);
                 break;
             case LIBRARIAN:
                 addMemberBtn.setManaged(false);
                 editMemberBtn.setManaged(false);
                 addBookBtn.setManaged(false);
+                addBookCopyBtn.setManaged(false);
                 break;
         }
     }
-    
+
     public void setContent(Node content) {
         contentAnchorPane.getChildren().setAll(content);
+    }
+
+    public void setProfileLabelText(String text) {
+        profileLabel.setText(text);
     }
 }

@@ -54,7 +54,6 @@ public class AddMemberController {
             Notify.confirmation("Member saved successfully");
             clearFields();
         }
-
     }
 
     private LibraryMember getLibraryMember() {

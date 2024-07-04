@@ -37,6 +37,22 @@ public class CheckoutRecord implements Serializable {
         this.member = member;
     }
 
+    public String getIsbn() {
+        return bookCopy.getBook().getIsbn();
+    }
+
+    public int getCopyNumber() {
+        return bookCopy.getCopyNum();
+    }
+
+    public String getTitle() {
+        return bookCopy.getBook().getTitle();
+    }
+
+    public String getCheckedBy() {
+        return member.getFirstName() + " " + member.getLastName();
+    }
+
     @Override
     public String toString() {
         return "CheckoutRecordEntry{" +

@@ -41,6 +41,7 @@ public class Main extends Application {
 
         ProfileController controller = loader.getController();
         controller.initializeAuthorization(currentAuth);
+        controller.setProfileLabelText("Authorization level: " + currentAuth.toString());
 
         mainStage.setScene(scene);
     }

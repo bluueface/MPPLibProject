@@ -14,6 +14,13 @@
     -fx-background-radius: 40;
 }
 
+#loginMessage {
+    -fx-font-weight: bold;
+    -fx-text-fill: #efb7b7;
+    -fx-alignment: center;
+    -fx-text-alignment: center;
+}
+
 #usernameField,
 #passwordField {
     -fx-background-radius: 40;
@@ -45,7 +52,8 @@
     -fx-pref-height: 30;
 }
 
-#profileLabel {
+#profileLabel,
+#dashboardLabel {
     -fx-font-weight: bold;
 }
 
@@ -90,13 +98,18 @@
 .saveBtn,
 #editMemberSearchBtn,
 #checkoutButton,
-#addCopyBtn {
+#addCopyBtn,
+#printRecordBtn,
+#overdueBtn {
     -fx-pref-height: 38;
 }
 
 #checkoutLabel,
-#addCopyLabel {
+#addCopyLabel,
+#printRecordLabel,
+#overdueLabel {
     -fx-font-weight: bold;
-    -fx-text-fill: FF0000FF;
+    -fx-text-fill: #FF0000FF;
+    -fx-padding: 0 0 0 10;
 }
 

@@ -58,6 +58,7 @@ public class CheckoutController {
                 LibraryMember member = da.readMemberMap().get(memberId);
                 BookCopy availableCopy = book.getNextAvailableCopy();
                 LocalDate checkoutDate = LocalDate.now();
+                //LocalDate checkoutDate = LocalDate.now().minusDays(30);
                 LocalDate dueDate = checkoutDate.plusDays(book.getMaxCheckoutLength());
                 CheckoutRecord record = new CheckoutRecord(availableCopy, checkoutDate, dueDate, member);
                 member.addRecord(record);

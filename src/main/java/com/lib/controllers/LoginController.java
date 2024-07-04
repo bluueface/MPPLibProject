@@ -29,8 +29,6 @@ public class LoginController {
 
     @FXML
     protected void login(ActionEvent event) throws Exception {
-        usernameField.setText("103");
-        passwordField.setText("111");
         String id = usernameField.getText();
         String password = passwordField.getText();
         DataAccess da = new DataAccessFacade();

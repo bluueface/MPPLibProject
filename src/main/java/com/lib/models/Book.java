@@ -12,6 +12,7 @@ public final class Book implements Serializable {
     private String title;
     private int maxCheckoutLength;
 
+
     public Book(String isbn, String title, int maxCheckoutLength, List<Author> authors) {
         this.isbn = isbn;
         this.title = title;
