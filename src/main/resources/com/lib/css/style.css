@@ -19,18 +19,21 @@
     -fx-background-radius: 40;
 }
 
-#loginBtn {
-    -fx-background-color: #000000;
-    -fx-pref-width: 200;
-    -fx-pref-height: 40;
+.btn {
+    -fx-background-color: #262626;
     -fx-text-fill: #FFFFFF;
     -fx-font-weight: bold;
     -fx-background-radius: 40;
     -fx-cursor: hand;
 }
 
-#loginBtn:hover {
-    -fx-background-color: #262626;
+.btn:hover {
+    -fx-background-color: #1a1a1a;
+}
+
+#loginBtn {
+    -fx-pref-width: 200;
+    -fx-pref-height: 40;
 }
 
 #profileHBox {
@@ -67,17 +70,8 @@
 }
 
 #logOutBtn {
-    -fx-background-color: #262626;
-    -fx-background-radius: 40;
-    -fx-font-weight: bold;
-    -fx-text-fill: #FFFFFF;
     -fx-pref-width: 120;
     -fx-pref-height: 35;
-    -fx-cursor: hand;
-}
-
-#logOutBtn:hover {
-    -fx-background-color: #1a1a1a;
 }
 
 #contentAnchorPane {
@@ -86,18 +80,21 @@
     -fx-border-radius: 40;
 }
 
-#homeRoot {
-
+.textField {
+    -fx-font-weight: bold;
+    -fx-background-radius: 40;
+    -fx-pref-height: 35;
+    -fx-padding: 10 15 10 15;
 }
 
-#addMemberRoot {
+.saveBtn,
+#editMemberSearchBtn,
+#checkoutButton {
+    -fx-pref-height: 38;
 }
 
-#editMemberRoot {
-
-}
-
-#addBookRoot {
-
+#checkoutLabel {
+    -fx-font-weight: bold;
+    -fx-text-fill: FF0000FF;
 }
 

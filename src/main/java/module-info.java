@@ -14,4 +14,6 @@ module com.lib {
     exports com.lib;
     exports com.lib.controllers;
     opens com.lib.controllers to javafx.fxml;
+    exports com.lib.dataaccess;
+    opens com.lib.dataaccess to javafx.fxml;
 }

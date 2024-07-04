@@ -1,5 +1,7 @@
 package com.lib;
 
+import com.lib.controllers.ProfileController;
+import com.lib.dataaccess.Auth;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -31,11 +33,15 @@ public class Main extends Application {
         mainStage.show();
     }
 
-    public static void loadProfile() throws Exception {
+    public static void loadProfile(Auth currentAuth) throws Exception {
         FXMLLoader loader = new FXMLLoader(Main.class.getResource("views/profile.fxml"));
         Parent root = loader.load();
         Scene scene = new Scene(root, WIDTH, HEIGHT);
-        scene.getStylesheets().add(style);
+        scene.getStylesheets().add(getStyle());
+
+        ProfileController controller = loader.getController();
+        controller.initializeAuthorization(currentAuth);
+
         mainStage.setScene(scene);
     }
 

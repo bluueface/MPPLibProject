@@ -31,7 +31,8 @@
                 </Circle>
                 <Label fx:id="profileLabel" prefHeight="18.0" prefWidth="125.0" text="Aziz Ouadoud"/>
                 <Region prefHeight="40.0" prefWidth="321.0" HBox.hgrow="ALWAYS"/>
-                <Button fx:id="logOutBtn" mnemonicParsing="false" onAction="#logout" text="Log Out"/>
+                <Button fx:id="logOutBtn" styleClass="btn" mnemonicParsing="false" onAction="#logout"
+                        text="Log Out"/>
             </children>
             <VBox.margin>
                 <Insets left="20.0" right="20.0" top="20.0"/>
@@ -45,14 +46,14 @@
                             <children>
                                 <VBox prefHeight="222.0" prefWidth="217.0" spacing="5.0">
                                     <children>
-                                        <Button fx:id="homeBtn" mnemonicParsing="false" onAction="#home"
-                                                styleClass="dashboardBtn" text="Home"/>
                                         <Button fx:id="addMemberBtn" mnemonicParsing="false" onAction="#addMember"
                                                 styleClass="dashboardBtn" text="Add Member"/>
                                         <Button fx:id="editMemberBtn" mnemonicParsing="false" onAction="#editMember"
                                                 styleClass="dashboardBtn" text="Edit Member"/>
                                         <Button fx:id="addBookBtn" mnemonicParsing="false" onAction="#addBook"
                                                 styleClass="dashboardBtn" text="Add Book"/>
+                                        <Button fx:id="checkoutBookBtn" mnemonicParsing="false" onAction="#checkout"
+                                                styleClass="dashboardBtn" text="Checkout book"/>
                                     </children>
                                     <padding>
                                         <Insets top="38.0"/>

@@ -1,11 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Label?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-
-<AnchorPane fx:id="editMemberRoot" prefHeight="385.0" prefWidth="435.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <Label layoutX="183.0" layoutY="176.0" text="edit member" />
-   </children>
+<AnchorPane fx:id="editMemberRoot" prefHeight="385.0" prefWidth="435.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.lib.controllers.EditMemberController">
+    <children>
+        <VBox prefHeight="385.0" prefWidth="435.0" spacing="20.0">
+            <children>
+                <HBox prefHeight="40.0" prefWidth="395.0" spacing="20.0">
+                    <children>
+                        <TextField fx:id="editMemberSearchTxtField" prefHeight="25.0" prefWidth="318.0" promptText="Enetr member id" styleClass="textField" />
+                        <Button fx:id="editMemberSearchBtn" mnemonicParsing="false" onAction="#loadExistingMember" prefHeight="25.0" prefWidth="80.0" styleClass="btn" text="Search" />
+                    </children>
+                </HBox>
+                <HBox prefHeight="35.0" prefWidth="395.0" spacing="10.0">
+                    <children>
+                        <TextField fx:id="firstNameEditTxtField" prefHeight="25.0" prefWidth="181.0" promptText="Enetr first name" styleClass="textField" />
+                        <TextField fx:id="lastNameEditTxtField" prefHeight="25.0" prefWidth="204.0" promptText="Enter last name" styleClass="textField" />
+                    </children>
+                </HBox>
+                <TextField fx:id="streetEditTxtField" promptText="Enter street" styleClass="textField" />
+                <HBox prefHeight="35.0" prefWidth="395.0" spacing="10.0">
+                    <children>
+                        <TextField fx:id="cityEditTxtField" prefHeight="25.0" prefWidth="201.0" promptText="Enter city" styleClass="textField" />
+                        <TextField fx:id="stateEditTxtField" prefHeight="25.0" prefWidth="193.0" promptText="Enter state" styleClass="textField" />
+                    </children>
+                </HBox>
+                <HBox prefHeight="33.0" prefWidth="395.0" spacing="10.0">
+                    <children>
+                        <TextField fx:id="zipCodeEditTxtField" prefHeight="25.0" prefWidth="146.0" promptText="Enter zip code" styleClass="textField" />
+                        <TextField fx:id="telEditTxtField" prefHeight="25.0" prefWidth="245.0" promptText="Enter phone number" styleClass="textField" />
+                    </children>
+                </HBox>
+                <Button fx:id="updateMember" disable="true" mnemonicParsing="false" onAction="#updateMember" prefHeight="25.0" prefWidth="445.0" styleClass="saveBtn,btn" text="Save">
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin></Button>
+            </children>
+            <padding>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            </padding>
+        </VBox>
+    </children>
 </AnchorPane>

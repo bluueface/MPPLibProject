@@ -1,11 +1,13 @@
 package com.lib.controllers;
 
 import com.lib.Main;
+import com.lib.dataaccess.Auth;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
@@ -14,8 +16,20 @@ public class ProfileController {
     private AnchorPane contentAnchorPane;
 
     @FXML
-    private void home() {
-        loadContent("views/home.fxml");
+    private Button addMemberBtn;
+
+    @FXML
+    private Button editMemberBtn;
+
+    @FXML
+    private Button addBookBtn;
+
+    @FXML
+    private Button checkoutBookBtn;
+
+    @FXML
+    private void checkout() {
+        loadContent("views/checkout-book.fxml");
     }
 
     @FXML
@@ -33,15 +47,6 @@ public class ProfileController {
         loadContent("views/add-book.fxml");
     }
 
-    private void loadContent(String fxml) {
-        try {
-            Node content = FXMLLoader.load(Main.class.getResource(fxml));
-            contentAnchorPane.getChildren().setAll(content);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-
     @FXML
     private void logout() {
         try {
@@ -54,6 +59,29 @@ public class ProfileController {
             e.printStackTrace();
         }
     }
+
+    private void loadContent(String fxml) {
+        try {
+            Node content = FXMLLoader.load(Main.class.getResource(fxml));
+            contentAnchorPane.getChildren().setAll(content);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void initializeAuthorization(Auth currentAuth) {
+        switch (currentAuth) {
+            case ADMIN:
+                checkoutBookBtn.setManaged(false);
+                break;
+            case LIBRARIAN:
+                addMemberBtn.setManaged(false);
+                editMemberBtn.setManaged(false);
+                addBookBtn.setManaged(false);
+                break;
+        }
+    }
+
 
     public void setContent(Node content) {
         contentAnchorPane.getChildren().setAll(content);
